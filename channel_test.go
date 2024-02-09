@@ -70,3 +70,12 @@ func TestInOutChannel(t *testing.T) {
 
 	time.Sleep(5 * time.Second)
 }
+
+func TestOutChannel(t *testing.T) {
+	channel := make(chan string)
+	defer close(channel)
+
+	go OnlyOut(channel)
+
+	time.Sleep(5 * time.Second)
+}
