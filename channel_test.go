@@ -74,12 +74,4 @@ func TestInOutChannel(t *testing.T) {
 func TestOutChannel(t *testing.T) {
 	channel := make(chan string)
 	defer close(channel)
-
-	go OnlyOut(channel)
-
-	time.Sleep(5 * time.Second)
-}
-
-func HelloWorld() {
-	fmt.Println("Hello World")
 }
