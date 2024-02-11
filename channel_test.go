@@ -75,3 +75,7 @@ func TestOutChannel(t *testing.T) {
 	channel := make(chan string)
 	defer close(channel)
 }
+func TestOutChannel2(t *testing.T) {
+	channel := make(chan string)
+	defer close(channel)
+}
